@@ -3,4 +3,10 @@ class PagesController < ApplicationController
 
   def home
   end
+
+  def map
+  end
+
+  def chat
+  end
 end
