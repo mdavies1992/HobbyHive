@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'users/registrations' }
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -11,4 +11,7 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   resources :user, only: [:show, :edit, :update]
+
+  get '/map' => 'pages#map'
+  get '/chat' => 'pages#chat'
 end

@@ -31,7 +31,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_17_083201) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "username", null: false
+    t.string "username"
     t.text "description"
     t.float "latitude"
     t.float "longitude"
