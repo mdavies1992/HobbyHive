@@ -1,0 +1,45 @@
+.nearby-users {
+  padding: 20px;
+}
+
+.user-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+.user-info {
+  display: flex;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user-hobbies {
+  display: flex;
+  align-items: center;
+}
+
+.user-hobbies button {
+  margin-left: 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4a4aff;
+  color: #fff;
+  cursor: pointer;
+}

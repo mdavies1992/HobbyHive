@@ -1,4 +1,39 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-Hello World!
-Test.
+  <div class="search-bar">
+    <input type="text" placeholder="Search hobbies or users...">
+  </div>
+
+  <div class="featured-hobby-carousel">
+    <p>Feature hobby carousel</p>
+  </div>
+
+  <div class="nearby-users">
+    <h2>Nearby Users</h2>
+    <% if @users.present? %>
+      <% @users.each do |user| %>
+        <div class="user-card">
+          <div class="user-info">
+            <div class="user-avatar">Avatar</div>
+            <div class="user-details">
+              <p><%= user.username %></p>
+              <p><%= user.location %></p>
+            </div>
+          </div>
+          <div class="user-hobbies">
+            <% user.hobbies.each do |hobby| %>
+              <button><%= hobby.name %></button>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    <% else %>
+      <p>No users found.</p>
+    <% end %>
+  </div>
+
+  <div class="bottom-nav">
+    <div class="nav-item">Home</div>
+    <div class="nav-item">Friend</div>
+    <div class="nav-item">Search</div>
+    <div class="nav-item">Notification</div>
+    <div class="nav-item">Messages</div>
+  </div>
